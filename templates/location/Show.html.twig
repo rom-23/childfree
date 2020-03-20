@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+{% block title product.name %}
+
+{% block stylesheets %}
+{% endblock %}
+  {% block body %}
+<div  class="container-fluid">
+    <div class="jumbotron p-4">
+        <div class="container pt-5">
+            <h3 class="text-success">Nom du lieu : {{ location.name }}</h3>
+            <h4 class="text-primary">Categorie : {{ location.categories.name }}</h4>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            {% if app.request.hasPreviousSession %}
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if not form.vars.valid %}
+                <div class="alert alert-danger">
+                    Erreur dans le formulaire
+                </div>
+            {% endif %}
+            <div class="card mb-3 p-3">
+                <div class="row">
+                    <div class="col-md-7">
+                        {% if product.image %}
+                            <img class="img-thumbnail" src="{{ vich_uploader_asset(product, 'imageFile') }}"
+                                 alt="card-img-top"
+                                 style="width:100%;height:auto;">
+                        {% else %}
+                            <img class="img-thumbnail" src="{{ 'uploads/images/post/empty.jpg' }}"
+                                 alt="card-img-top"
+                                 style="width:100%;height:auto;">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-5 text-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header text-light bg-info text-center">
+                        <h5 class="text-center bg-info text-white">Description du lieu</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"> {{ location.name | nl2br }}</p>
+                        <p><i>Lieu ajouté le {{ location.createdAt | date('d/m/y') }}
+                                à {{ location.createdAt | date('H:i') }}</i></p>
+                    </div>
+                </div>
+                    </div>
+                {#      Commentaires#}
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header text-light bg-info text-center">
+                            <h5 class="text-center bg-info text-white">Donner son avis</h5>
+                        </div>
+                        <div class="card-body text-center">
+{#                            {% if app.user %}#}
+{#                                #}{# User  -> {{ userConnect }}#}
+{#                                {{ form_start(commentForm) }}#}
+{#                                {{ form_widget(commentForm) }}#}
+{#                                <button type="submit" class="btn btn-success">envoyer</button>#}
+{#                                {{ form_end(commentForm) }}#}
+{#                            {% else %}#}
+{#                                <p class="text-primary"><i>Vous ne pouvez pas poster donner votre avis si vous n'etes#}
+{#                                        pas connecté</i></p>#}
+{#                                <a href="{{ path('login') }}" class="btn btn-success mt-3">Se connecter</a>#}
+{#                            {% endif %}#}
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="container mt-4">
+                    <div class="card">
+                        <div class="card-header text-light bg-info text-center">
+                            <h5 class="text-center bg-info text-white">Avis des clients</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <ul class="list-group">
+{#                                {% for comment in product.comments %}#}
+{#                                    <li class="list-group-item">{{ comment.user.username }} a écrit#}
+{#                                        le {{ comment.createdAt | date('d/m/y') }} - <a#}
+{#                                                href="#">voir</a>#}
+{#                                    </li>#}
+{#                                {% endfor %}#}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container mt-4">
+                    <div class="card">
+                        <div class="card-header text-light bg-info text-center">
+                            <h5 class="text-center bg-info text-white">Gallerie d'images de l'article</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <ul class="list-group">
+{#                                {% for imag in product.images %}#}
+{#                                    <li class="list-group-item"><img src="{{ imag.fileName }}" alt=""></li>#}
+{#                                {% endfor %}#}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    {% endblock %}

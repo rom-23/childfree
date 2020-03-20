@@ -1,0 +1,43 @@
+
+//$primary: darken(#8e0cca, 20%);
+$colorhead: #e9ffa4;
+.sidebar{
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+.mainback{
+    background: rgba(68, 150, 249, 0.19);
+    padding:5em;
+    .btn{
+        background: rgba(143, 87, 189, 0.82);
+        &:hover{
+            background: #AAAAAA;
+        }
+    }
+    @extend .container-fluid;
+}
+.mainback2{
+    background: rgba(0, 249, 36, 0.19);
+    padding:5em;
+    .btn{
+        background: rgba(143, 87, 189, 0.82);
+        &:hover{
+            background: #AAAAAA;
+        }
+    }
+    @extend .container-fluid;
+}
+.mainproject{
+    @extend .container;
+}
+.maintitle{
+    text-align: center;
+    @extend .container;
+}
+header{
+    padding: 1em;
+}
+
+@import "~bootstrap/scss/bootstrap";

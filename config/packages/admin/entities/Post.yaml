@@ -1,0 +1,17 @@
+easy_admin:
+  entities:
+    Post:
+      class: App\Entity\Post
+
+      list:
+        help: 'The items in this entity can NOT be deleted here, Products must be = 0'
+        actions:
+          - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+        fields: ['id','title','content','user','images','createdAt']
+      form:
+        fields:
+          - {property: 'title'}
+          - {property: 'content'}
+          - {property: 'user'}
+          - {property: 'images'}

@@ -1,0 +1,20 @@
+easy_admin:
+  entities:
+    Location:
+      class: App\Entity\Location
+      list:
+        help: 'The items in this entity can NOT be deleted here, delete it in Comments & Images before'
+        actions:
+          - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+        fields: ['id','name','address','postal','city','categories','createdAt']
+      form:
+        fields:
+          - {type: 'group', label: 'Content'}
+          - {property: 'name'}
+          - {property: 'address'}
+          - {property: 'postal'}
+          - {property: 'city'}
+          - {property: 'createdAt'}
+          - {type: 'group', label: 'Categories'}
+          - {property: 'categories'}

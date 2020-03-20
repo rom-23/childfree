@@ -1,0 +1,14 @@
+easy_admin:
+  design:
+    menu:
+      - label: 'Child Free'
+        icon: 'newspaper-o'
+        children:
+          - {entity: 'Location', icon: 'layer-group', label: 'Locations'}
+          - {entity: 'Category', icon: 'layer-group', label: 'Categories'}
+          - {entity: 'Image', icon: 'image', label: 'Images'}
+          - {entity: 'Post', icon: 'clone', label: 'Posts'}
+      - label: 'Users'
+        icon: 'user'
+        children:
+          - {entity: 'User', icon: 'user', label: 'User'}

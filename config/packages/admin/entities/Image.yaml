@@ -1,0 +1,19 @@
+easy_admin:
+  entities:
+    Image:
+      class: App\Entity\Image
+      list:
+        actions:
+          - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+        fields: ['id','posts','fileName','createdAt','updatedAt', { property: 'fileName', type: 'image', base_path: '%app.path.post_images%' } ]
+
+      form:
+        fields:
+          - {property: 'imageFile', type: 'vich_image', label: 'Apercu image'}
+          - {property: 'posts'}
+      show:
+        fields:
+          - { property: 'fileName', type: 'image', base_path: '%app.path.post_images%' }
+          - {property: 'createdAt'}
+          - {property: 'updatedAt'}
