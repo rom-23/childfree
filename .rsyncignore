@@ -6,6 +6,7 @@
 /var/cache/
 /vendor/
 .git
+.env
 .*
 .idea
 /.web-server-pid

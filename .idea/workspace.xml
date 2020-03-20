@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef79832-4a16-434d-a4c9-7e412616322b" name="Default Changelist" comment="" />
+    <list default="true" id="fef79832-4a16-434d-a4c9-7e412616322b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rsyncignore" beforeDir="false" afterPath="$PROJECT_DIR$/.rsyncignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/_navBar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navBar.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="/usr/local/bin/composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -141,6 +150,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1YB7SzQk5ycRmJHtK7iZsCVIAGS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -148,8 +158,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../domains" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
@@ -188,6 +199,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582404137964</updated>
       <workItem from="1582404139539" duration="56540000" />
+      <workItem from="1584712691768" duration="5998000" />
     </task>
     <servers />
   </component>
@@ -211,9 +223,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582484759387" />
-    <state x="776" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1582410359805">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2655" y="278" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584716402534">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2655" y="278" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1584716402534" />
     <state x="776" y="298" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582410359805" />
     <state x="482" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1582404255441">
       <screen x="67" y="27" width="1853" height="1053" />
