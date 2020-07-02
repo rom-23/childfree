@@ -16,21 +16,21 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
-    /**
-     * @Route("/login", name="login")
-     * @param AuthenticationUtils $authenticationUtils
-     * @return Response
-     */
-    public function login( AuthenticationUtils $authenticationUtils )
-    {
-        $error = $authenticationUtils -> getLastAuthenticationError();
-        $lastUsername = $authenticationUtils -> getLastUsername();
-        return $this -> render( 'security/Login.html.twig', [
-            'last_username' => $lastUsername,
-            'error'         => $error
-        ] );
-    }
-
+//    /**
+//     * @Route("/login", name="login")
+//     * @param AuthenticationUtils $authenticationUtils
+//     * @return Response
+//     */
+//    public function login( AuthenticationUtils $authenticationUtils )
+//    {
+//        $error = $authenticationUtils -> getLastAuthenticationError();
+//        $lastUsername = $authenticationUtils -> getLastUsername();
+//        return $this -> render( 'security/Login.html.twig', [
+//            'last_username' => $lastUsername,
+//            'error'         => $error
+//        ] );
+//    }
+//
     /**
      * @Route("/register", name="security_registration")
      * @param Request $request

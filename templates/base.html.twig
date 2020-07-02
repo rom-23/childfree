@@ -2,38 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{% block title %}Home{% endblock %}</title>
     {% block stylesheets %}
-        {# <link rel="stylesheet" href="{{ asset('build/app.css') }}">#}
-        {{ encore_entry_link_tags('mainstyle') }}
+        <link rel="stylesheet" href="{{ asset('/css/themify-icons.css') }}">
     {% endblock %}
 </head>
-<body>
-{% include('includes/_navBar.html.twig') %}
-<header>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
-    </div>
-</header>
+<body class="main">
 {% block body %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-5">
+                <li class="nav-item">
+                    <a class="nav-link mr-5" href="homepage" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offer" data-toggle="collapse" data-target=".navbar-collapse.show">New offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu" data-toggle="collapse" data-target=".navbar-collapse.show">Menus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about" data-toggle="collapse" data-target=".navbar-collapse.show">About</a>
+                </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li>
+                            {% if not app.user %}
+                                <a href="{{ path('security_registration') }}">Register
+                                </a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </form>
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My account</a>
+                    </li>
+                {% endif %}
+            </ul>
+            <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+                <a class="nav-link text-white" href="login">Login</a>
+                {% if app.user %}
+                    <a href="{{ path('logout') }}" class="nav-link">logout</a>
+                {% endif %}
+            </ul>
 
+        </div>
+    </nav>
+    <div id="display-view2"></div>
+    <div id="display-view"></div>
 {% endblock %}
-
-{% include('includes/_footer.html.twig') %}
-
 {% block javascripts %}
-    {#<script src="{{  asset('build/app.js') }}" type="module"></script>#}
     {{ encore_entry_script_tags('app') }}
+    <script src="{{ asset('js/display-menu.js') }}"></script>
 {% endblock %}
-
 </body>
 </html>

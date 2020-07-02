@@ -8,10 +8,10 @@ easy_admin:
         actions:
           - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
           - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
-        fields: ['id','title','content','user','images','createdAt']
+        fields: ['id','title','content','user','img','createdAt']
       form:
         fields:
           - {property: 'title'}
           - {property: 'content'}
           - {property: 'user'}
-          - {property: 'images'}
+          - {property: 'img'}

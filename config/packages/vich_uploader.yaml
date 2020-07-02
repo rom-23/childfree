@@ -7,5 +7,5 @@ vich_uploader:
             namer: Vich\UploaderBundle\Naming\UniqidNamer
     #mappings:
     #    post:
-    #        uri_prefix: /images/post
-    #        upload_destination: '%kernel.project_dir%/public/images/post'
+    #        uri_prefix: /img/post
+    #        upload_destination: '%kernel.project_dir%/public/img/post'

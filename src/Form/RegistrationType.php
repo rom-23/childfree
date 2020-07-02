@@ -10,20 +10,20 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class RegistrationType extends AbstractType
 {
-    public function buildForm( FormBuilderInterface $builder, array $options )
-    {
-        $builder
-            -> add( 'userName' )
-            -> add( 'userEmail' )
-            -> add( 'userPassword', PasswordType::class )
-            -> add( 'confirmPassword', PasswordType::class );
-            //-> add( 'createdAt' );
-    }
+  public function buildForm(FormBuilderInterface $builder, array $options)
+  {
+    $builder
+      ->add('userName')
+      ->add('userEmail')
+      ->add('userPassword', PasswordType::class)
+      ->add('confirmPassword', PasswordType::class);
+    //-> add( 'createdAt' );
+  }
 
-    public function configureOptions( OptionsResolver $resolver )
-    {
-        $resolver -> setDefaults( [
-            'data_class' => User::class,
-        ] );
-    }
+  public function configureOptions(OptionsResolver $resolver)
+  {
+    $resolver->setDefaults([
+      'data_class' => User::class,
+    ]);
+  }
 }

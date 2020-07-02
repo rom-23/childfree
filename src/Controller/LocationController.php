@@ -3,13 +3,7 @@
 namespace App\Controller;
 
 
-use App\Entity\Contact;
 use App\Entity\Location;
-use App\Entity\User;
-
-use App\Form\ContactType;
-use App\Form\ProductSearchType;
-use App\Notification\ContactNotif;
 use App\Repository\LocationRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
@@ -17,8 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Knp\Component\Pager\PaginatorInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
+
 
 class LocationController extends AbstractController
 {
@@ -28,7 +21,6 @@ class LocationController extends AbstractController
     private $repository;
 
     /**
-     * PropertyController constructor.
      * @param LocationRepository $repository
      */
     public function __construct( LocationRepository $repository )
@@ -97,12 +89,11 @@ class LocationController extends AbstractController
      * @param Location $location
      * @param string $slug
      * @param Request $request
-     * @param ContactNotif $notification
      * @param EntityManagerInterface $manager
      * @return Response;
      * @throws Exception
      */
-    public function show( Location $location, string $slug, Request $request, ContactNotif $notification, EntityManagerInterface $manager ): Response
+    public function show( Location $location, string $slug, Request $request, EntityManagerInterface $manager ): Response
     {
         if($location -> getSlug() !== $slug) {
             return $this -> redirectToRoute( 'location.show', [
